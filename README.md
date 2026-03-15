@@ -16,11 +16,13 @@ This project implements a real-time multiband audio equalizer using a software-b
 ### Stage 1: FIR Filter (Tone Shaping)
 Implemented using a parallel method to combine multiple band-pass responses. The difference equation is:
 $$y[n] = \sum_{k=0}^{N} b_k x[n-k]$$
+
 For this project, we used $N = 64$ as stated before as consideration for computer efficiency and minimize the latency since higher order give more latency
 
 ### Stage 2: IIR Filter (Noise Cleaning)
 A recursive 4th-order Butterworth filter ensuring a maximally flat passband. The transfer function in the $z$-domain is:
 $$H(z) = \frac{\sum_{k=0}^{N} b_k z^{-k}}{1 + \sum_{k=1}^{N} a_k z^{-k}}$$
+
 The choice of $N = 4$ order for IIR filter (specifically the Butterworth topology) for a real-time system is a strategic decision to balance signal quality with processing speed.
 
 ## 🛠️ Setup & Requirements
