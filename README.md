@@ -7,7 +7,8 @@ This project implements a real-time multiband audio equalizer using a software-b
 ## 📑 Features
 
 * **Low-Latency Audio Streaming:** Utilizes the ASIO protocol (ASIO4ALL v2) to bypass the standard operating system audio mixer, achieving a theoretical base latency of around 2.9 ms to 6.5 ms.
-* **Hybrid Filter Architecture:** * **Stage 1 (Tone Shaping):** A Finite Impulse Response (FIR) filter (order $N=64$) designed using a parallel method to combine multiple band-pass responses.
+* **Hybrid Filter Architecture:** 
+    * **Stage 1 (Tone Shaping):** A Finite Impulse Response (FIR) filter (order $N=64$) designed using a parallel method to combine multiple band-pass responses.
     * **Stage 2 (Noise Cleaning):** An Infinite Impulse Response (IIR) Butterworth Low-Pass filter (order 4) with an 8 kHz cut-off frequency to limit bandwidth and reduce high-frequency digital noise.
 * **Built-in Genre Presets:** Includes dynamically calculated filter coefficients for Rock, Jazz, Pop, and Flat profiles.
 * **Real-Time Visualizations:** Automatically generates and saves Magnitude and Phase Response plots for the selected active preset.
