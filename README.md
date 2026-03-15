@@ -1,4 +1,4 @@
-# Real-Time Multiband Equalizer Berbasis MATLAB
+# Real-Time Multiband Equalizer using MATLAB
 
 This project implements a real-time multiband audio equalizer using a software-based approach in MATLAB. It is designed to process audio signals with low latency using a serial hybrid filter architecture, making it suitable for direct instrument input, such as an electric guitar.
 
